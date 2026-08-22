@@ -17,26 +17,39 @@
     :root {
       --orto-dark: #1B3B2A;
       --orto-green: #2D5A3F;
+      --orto-mid-green: #3A6E50;
       --orto-light-green: #4A8C6A;
       --orto-accent: #6FCF97;
-      --orto-white: #FFFFFF;
-      --orto-off-white: #F0F7F4;
+      --orto-pale: #A8E6C3;
+      --orto-text: #E8F5EE;
+    }
+
+    body {
+      background: var(--orto-dark) !important;
     }
 
     .reveal {
       font-family: 'Poppins', sans-serif;
+      background: var(--orto-dark) !important;
+    }
+
+    .reveal .slides {
+      background: var(--orto-dark) !important;
     }
 
     .reveal .slides section {
-      background: var(--orto-dark);
-      color: var(--orto-white);
-      border-radius: 0;
+      background: var(--orto-dark) !important;
+      color: var(--orto-text);
       padding: 40px 60px;
       text-align: left;
     }
 
+    .reveal .slide-background {
+      background: var(--orto-dark) !important;
+    }
+
     .reveal h1, .reveal h2, .reveal h3 {
-      color: var(--orto-white);
+      color: var(--orto-accent);
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
       text-transform: none;
@@ -44,10 +57,11 @@
 
     .reveal h1 {
       font-size: 2.2em;
+      color: var(--orto-pale);
     }
 
     .reveal h2 {
-      font-size: 1.6em;
+      font-size: 1.5em;
       margin-bottom: 0.5em;
       border-bottom: 3px solid var(--orto-accent);
       padding-bottom: 0.3em;
@@ -55,15 +69,15 @@
     }
 
     .reveal h3 {
-      font-size: 1.2em;
-      color: var(--orto-accent);
+      font-size: 1.1em;
+      color: var(--orto-pale);
       font-weight: 600;
     }
 
     .reveal p, .reveal li {
       font-size: 0.85em;
       line-height: 1.6;
-      color: var(--orto-off-white);
+      color: var(--orto-text);
     }
 
     .reveal ul {
@@ -85,13 +99,8 @@
       font-size: 0.8em;
     }
 
-    .reveal .highlight {
-      color: var(--orto-accent);
-      font-weight: 600;
-    }
-
     .reveal .subtitle {
-      color: var(--orto-accent);
+      color: var(--orto-pale);
       font-size: 1.1em;
       font-weight: 300;
     }
@@ -102,12 +111,11 @@
     }
 
     .reveal .cover-logo {
-      width: 200px;
+      width: 180px;
       border-radius: 24px;
       margin-bottom: 30px;
     }
 
-    /* Capa */
     .reveal .cover {
       text-align: center;
       display: flex;
@@ -116,7 +124,6 @@
       justify-content: center;
     }
 
-    /* Slide de fechamento */
     .reveal .closing {
       text-align: center;
       display: flex;
@@ -125,7 +132,6 @@
       justify-content: center;
     }
 
-    /* Tabela */
     .reveal table {
       width: 100%;
       border-collapse: collapse;
@@ -135,22 +141,21 @@
 
     .reveal table th {
       background: var(--orto-green);
-      color: var(--orto-white);
+      color: var(--orto-pale);
       padding: 10px 15px;
       text-align: left;
     }
 
     .reveal table td {
       padding: 8px 15px;
-      border-bottom: 1px solid var(--orto-light-green);
-      color: var(--orto-off-white);
+      border-bottom: 1px solid var(--orto-mid-green);
+      color: var(--orto-text);
     }
 
     .reveal table tr:nth-child(even) td {
       background: rgba(74, 140, 106, 0.1);
     }
 
-    /* Fluxo */
     .flow {
       display: flex;
       align-items: center;
@@ -168,6 +173,7 @@
       font-weight: 600;
       text-align: center;
       min-width: 100px;
+      color: var(--orto-pale);
     }
 
     .flow-arrow {
@@ -176,7 +182,6 @@
       font-weight: bold;
     }
 
-    /* Destaque */
     .reveal .quote {
       border-left: 4px solid var(--orto-accent);
       padding-left: 20px;
@@ -186,13 +191,6 @@
       color: var(--orto-accent);
     }
 
-    .reveal .big-number {
-      font-size: 2em;
-      font-weight: 700;
-      color: var(--orto-accent);
-    }
-
-    /* Corner logo */
     .corner-logo {
       position: absolute;
       top: 20px;
@@ -200,6 +198,126 @@
       width: 50px;
       border-radius: 10px;
       opacity: 0.8;
+    }
+
+    /* ===================== */
+    /* MINI PROTÓTIPO iOS    */
+    /* ===================== */
+    .iphone-mockups {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .iphone {
+      width: 200px;
+      background: var(--orto-green);
+      border-radius: 28px;
+      padding: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      position: relative;
+      border: 2px solid var(--orto-mid-green);
+    }
+
+    .iphone-notch {
+      width: 80px;
+      height: 16px;
+      background: var(--orto-dark);
+      border-radius: 0 0 12px 12px;
+      margin: 0 auto 10px;
+    }
+
+    .iphone-screen {
+      background: var(--orto-dark);
+      border-radius: 16px;
+      padding: 14px;
+      min-height: 260px;
+    }
+
+    .iphone-screen h4 {
+      color: var(--orto-accent);
+      font-size: 0.6em;
+      margin: 0 0 8px 0;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .iphone-screen .app-item {
+      background: var(--orto-mid-green);
+      border-radius: 8px;
+      padding: 6px 10px;
+      margin-bottom: 6px;
+      font-size: 0.45em;
+      color: var(--orto-text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .iphone-screen .app-item .label {
+      font-weight: 600;
+    }
+
+    .iphone-screen .app-item .value {
+      color: var(--orto-accent);
+      font-weight: 700;
+    }
+
+    .iphone-screen .app-item.highlight-item {
+      background: var(--orto-accent);
+      color: var(--orto-dark);
+    }
+
+    .iphone-screen .app-item.highlight-item .value {
+      color: var(--orto-dark);
+    }
+
+    .iphone-screen .progress-bar {
+      background: var(--orto-mid-green);
+      border-radius: 6px;
+      height: 10px;
+      margin-top: 4px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+
+    .iphone-screen .progress-bar .fill {
+      height: 100%;
+      border-radius: 6px;
+      background: var(--orto-accent);
+    }
+
+    .iphone-screen .status-badge {
+      display: inline-block;
+      background: var(--orto-accent);
+      color: var(--orto-dark);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.4em;
+      font-weight: 700;
+    }
+
+    .iphone-screen .status-badge.pending {
+      background: var(--orto-pale);
+    }
+
+    .iphone-home {
+      width: 40px;
+      height: 4px;
+      background: var(--orto-mid-green);
+      border-radius: 2px;
+      margin: 10px auto 0;
+    }
+
+    .iphone-label {
+      text-align: center;
+      font-size: 0.55em;
+      color: var(--orto-pale);
+      margin-top: 8px;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -272,19 +390,131 @@
         </ul>
       </section>
 
-      <!-- SLIDE 6 — Como funciona (fluxo) -->
+      <!-- SLIDE 6 — Como funciona (MINI PROTÓTIPO iOS) -->
       <section>
         <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
-        <h2>Como funciona (fluxo)</h2>
-        <p><strong>Título:</strong></p>
-        <div class="flow">
-          <div class="flow-step">Passo 1</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">Passo 2</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">Passo 3</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step">Passo 4</div>
+        <h2>Como funciona</h2>
+
+        <div class="iphone-mockups">
+
+          <!-- TELA 1: Consultas -->
+          <div>
+            <div class="iphone">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen">
+                <h4>📋 Minhas Consultas</h4>
+                <div class="app-item highlight-item">
+                  <span class="label">Hoje 14:00</span>
+                  <span class="value">Manutenção</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">28/ago</span>
+                  <span class="value">Ajuste de fio</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">15/set</span>
+                  <span class="value">Avaliação</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">10/out</span>
+                  <span class="value">Troca de borracha</span>
+                </div>
+              </div>
+              <div class="iphone-home"></div>
+            </div>
+            <p class="iphone-label">Consultas</p>
+          </div>
+
+          <!-- TELA 2: Pagamentos -->
+          <div>
+            <div class="iphone">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen">
+                <h4>💳 Plano de Pagamentos</h4>
+                <div class="app-item">
+                  <span class="label">Parcela 1/24</span>
+                  <span class="status-badge">Pago</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">Parcela 2/24</span>
+                  <span class="status-badge">Pago</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">Parcela 3/24</span>
+                  <span class="status-badge">Pago</span>
+                </div>
+                <div class="app-item highlight-item">
+                  <span class="label">Parcela 4/24</span>
+                  <span class="value">Vence 25/ago</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">Parcela 5/24</span>
+                  <span class="status-badge pending">Pendente</span>
+                </div>
+              </div>
+              <div class="iphone-home"></div>
+            </div>
+            <p class="iphone-label">Pagamentos</p>
+          </div>
+
+          <!-- TELA 3: Prazo -->
+          <div>
+            <div class="iphone">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen">
+                <h4>⏱️ Prazo para Conclusão</h4>
+                <div class="app-item">
+                  <span class="label">Início</span>
+                  <span class="value">Mar/2026</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">Previsão</span>
+                  <span class="value">Mar/2028</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">Progresso</span>
+                  <span class="value">25%</span>
+                </div>
+                <div class="progress-bar"><div class="fill" style="width:25%"></div></div>
+                <div class="app-item highlight-item">
+                  <span class="label">Restam</span>
+                  <span class="value">18 meses</span>
+                </div>
+              </div>
+              <div class="iphone-home"></div>
+            </div>
+            <p class="iphone-label">Prazo</p>
+          </div>
+
+          <!-- TELA 4: Evolução -->
+          <div>
+            <div class="iphone">
+              <div class="iphone-notch"></div>
+              <div class="iphone-screen">
+                <h4>📈 Evolução do Tratamento</h4>
+                <div class="app-item">
+                  <span class="label">Fase 1</span>
+                  <span class="status-badge">Concluída</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">Fase 2</span>
+                  <span class="status-badge">Concluída</span>
+                </div>
+                <div class="app-item highlight-item">
+                  <span class="label">Fase 3</span>
+                  <span class="value">Em andamento</span>
+                </div>
+                <div class="app-item">
+                  <span class="label">Fase 4</span>
+                  <span class="status-badge pending">Futura</span>
+                </div>
+                <div class="progress-bar"><div class="fill" style="width:60%"></div></div>
+              </div>
+              <div class="iphone-home"></div>
+            </div>
+            <p class="iphone-label">Evolução</p>
+          </div>
+
         </div>
       </section>
 
