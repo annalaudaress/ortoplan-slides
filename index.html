@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OrtoPlan — Apresentação</title>
+
+  <!-- Reveal.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/simple.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --orto-dark: #1B3B2A;
+      --orto-green: #2D5A3F;
+      --orto-light-green: #4A8C6A;
+      --orto-accent: #6FCF97;
+      --orto-white: #FFFFFF;
+      --orto-off-white: #F0F7F4;
+    }
+
+    .reveal {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .reveal .slides section {
+      background: var(--orto-dark);
+      color: var(--orto-white);
+      border-radius: 0;
+      padding: 40px 60px;
+      text-align: left;
+    }
+
+    .reveal h1, .reveal h2, .reveal h3 {
+      color: var(--orto-white);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .reveal h1 {
+      font-size: 2.2em;
+    }
+
+    .reveal h2 {
+      font-size: 1.6em;
+      margin-bottom: 0.5em;
+      border-bottom: 3px solid var(--orto-accent);
+      padding-bottom: 0.3em;
+      display: inline-block;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      color: var(--orto-accent);
+      font-weight: 600;
+    }
+
+    .reveal p, .reveal li {
+      font-size: 0.85em;
+      line-height: 1.6;
+      color: var(--orto-off-white);
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .reveal ul li {
+      padding: 0.3em 0;
+      padding-left: 1.5em;
+      position: relative;
+    }
+
+    .reveal ul li::before {
+      content: "✦";
+      color: var(--orto-accent);
+      position: absolute;
+      left: 0;
+      font-size: 0.8em;
+    }
+
+    .reveal .highlight {
+      color: var(--orto-accent);
+      font-weight: 600;
+    }
+
+    .reveal .subtitle {
+      color: var(--orto-accent);
+      font-size: 1.1em;
+      font-weight: 300;
+    }
+
+    .reveal .slide-logo {
+      width: 120px;
+      border-radius: 16px;
+    }
+
+    .reveal .cover-logo {
+      width: 200px;
+      border-radius: 24px;
+      margin-bottom: 30px;
+    }
+
+    /* Capa */
+    .reveal .cover {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Slide de fechamento */
+    .reveal .closing {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Tabela */
+    .reveal table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      font-size: 0.75em;
+    }
+
+    .reveal table th {
+      background: var(--orto-green);
+      color: var(--orto-white);
+      padding: 10px 15px;
+      text-align: left;
+    }
+
+    .reveal table td {
+      padding: 8px 15px;
+      border-bottom: 1px solid var(--orto-light-green);
+      color: var(--orto-off-white);
+    }
+
+    .reveal table tr:nth-child(even) td {
+      background: rgba(74, 140, 106, 0.1);
+    }
+
+    /* Fluxo */
+    .flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 1em;
+    }
+
+    .flow-step {
+      background: var(--orto-green);
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 0.75em;
+      font-weight: 600;
+      text-align: center;
+      min-width: 100px;
+    }
+
+    .flow-arrow {
+      color: var(--orto-accent);
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /* Destaque */
+    .reveal .quote {
+      border-left: 4px solid var(--orto-accent);
+      padding-left: 20px;
+      font-style: italic;
+      font-size: 1em;
+      margin: 1em 0;
+      color: var(--orto-accent);
+    }
+
+    .reveal .big-number {
+      font-size: 2em;
+      font-weight: 700;
+      color: var(--orto-accent);
+    }
+
+    /* Corner logo */
+    .corner-logo {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      width: 50px;
+      border-radius: 10px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1 — CAPA -->
+      <section class="cover">
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="cover-logo">
+        <h1>OrtoPlan</h1>
+        <p class="subtitle">Título:</p>
+        <p class="subtitle">Subtítulo:</p>
+      </section>
+
+      <!-- SLIDE 2 — Persona -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Persona: Ana, 24 anos</h2>
+        <p><strong>Título:</strong></p>
+        <ul>
+          <li>Bullet 1:</li>
+          <li>Bullet 2:</li>
+          <li>Bullet 3:</li>
+          <li>Bullet 4:</li>
+          <li>Bullet 5:</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 3 — O problema (antes do OrtoPlan) -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>O problema (antes do OrtoPlan)</h2>
+        <p><strong>Título:</strong></p>
+        <p class="quote">Frase de destaque:</p>
+        <ul>
+          <li>Ícone 1:</li>
+          <li>Ícone 2:</li>
+          <li>Ícone 3:</li>
+          <li>Ícone 4:</li>
+          <li>Ícone 5:</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 4 — O problema do lado do profissional -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>O problema do lado do profissional</h2>
+        <p><strong>Título:</strong></p>
+        <ul>
+          <li>Bullet 1:</li>
+          <li>Bullet 2:</li>
+          <li>Bullet 3:</li>
+          <li>Bullet 4:</li>
+          <li>Bullet 5:</li>
+          <li>Bullet 6:</li>
+        </ul>
+        <p class="quote">Frase de oportunidade:</p>
+      </section>
+
+      <!-- SLIDE 5 — Nossa solução: OrtoPlan -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Nossa solução: OrtoPlan</h2>
+        <p><strong>Título:</strong></p>
+        <ul>
+          <li>Texto 1:</li>
+          <li>Texto 2:</li>
+          <li>Texto 3:</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 6 — Como funciona (fluxo) -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Como funciona (fluxo)</h2>
+        <p><strong>Título:</strong></p>
+        <div class="flow">
+          <div class="flow-step">Passo 1</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">Passo 2</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">Passo 3</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">Passo 4</div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7 — Funcionalidades -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Funcionalidades</h2>
+        <p><strong>Título:</strong></p>
+        <ul>
+          <li>Item 1:</li>
+          <li>Item 2:</li>
+          <li>Item 3:</li>
+          <li>Item 4:</li>
+          <li>Item 5:</li>
+          <li>Item 6:</li>
+          <li>Item 7:</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 8 — DEMONSTRAÇÃO (ao vivo) -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>DEMONSTRAÇÃO (ao vivo)</h2>
+        <p><strong>Título:</strong></p>
+        <ul>
+          <li>Bullet 1:</li>
+          <li>Bullet 2:</li>
+          <li>Bullet 3:</li>
+          <li>Bullet 4:</li>
+          <li>Bullet 5:</li>
+          <li>Bullet 6:</li>
+        </ul>
+        <p class="quote">Frase final:</p>
+      </section>
+
+      <!-- SLIDE 9 — Modelo de negócio -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Modelo de negócio</h2>
+        <p><strong>Título:</strong></p>
+        <div class="flow">
+          <div class="flow-step">Fluxo:</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Plano</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Plano 1:</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Plano 2:</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Plano 3:</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SLIDE 10 — Mercado e aquisição -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Mercado e aquisição</h2>
+        <p><strong>Título:</strong></p>
+        <h3>Público-alvo:</h3>
+        <ul>
+          <li>Estratégia 1:</li>
+          <li>Estratégia 2:</li>
+          <li>Estratégia 3:</li>
+          <li>Estratégia 4:</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 11 — Projeção financeira -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Projeção financeira</h2>
+        <p><strong>Título:</strong></p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Meta de clientes:</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Ticket médio:</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Receita mensal:</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Receita anual:</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Custos mensais:</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>Resultado:</strong></td>
+              <td><strong>—</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SLIDE 12 — Diferencial competitivo -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Diferencial competitivo</h2>
+        <p><strong>Título:</strong></p>
+        <ul>
+          <li>Frase 1:</li>
+          <li>Frase 2:</li>
+        </ul>
+        <h3>Diferencial:</h3>
+        <p>Foco:</p>
+      </section>
+
+      <!-- SLIDE 13 — Visão -->
+      <section>
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
+        <h2>Visão</h2>
+        <p><strong>Título:</strong></p>
+        <p class="quote">Texto:</p>
+      </section>
+
+      <!-- SLIDE 14 — Fechamento -->
+      <section class="closing">
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="cover-logo">
+        <h2>Fechamento</h2>
+        <p><strong>Título:</strong></p>
+        <p>Texto:</p>
+        <p class="quote">Frase final:</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'slide',
+      transitionSpeed: 'default',
+      width: 1280,
+      height: 720,
+      margin: 0,
+      center: true
+    });
+  </script>
+</body>
+</html>
