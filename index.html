@@ -42,6 +42,22 @@
       color: var(--orto-text);
       padding: 40px 60px;
       text-align: left;
+      overflow-y: auto !important;
+      max-height: 100%;
+    }
+
+    .reveal .slides section::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .reveal .slides section::-webkit-scrollbar-track {
+      background: rgba(74, 140, 106, 0.1);
+      border-radius: 6px;
+    }
+
+    .reveal .slides section::-webkit-scrollbar-thumb {
+      background: var(--orto-accent);
+      border-radius: 6px;
     }
 
     .reveal .slide-background {
@@ -304,6 +320,46 @@
       background: var(--orto-pale);
     }
 
+    /* Scroll bar iOS style */
+    .iphone-screen {
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--orto-accent) transparent;
+    }
+
+    .iphone-screen::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .iphone-screen::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 4px;
+    }
+
+    .iphone-screen::-webkit-scrollbar-thumb {
+      background: var(--orto-accent);
+      border-radius: 4px;
+    }
+
+    .iphone-scrollbar {
+      position: absolute;
+      right: 16px;
+      top: 60px;
+      bottom: 40px;
+      width: 3px;
+      background: rgba(74, 140, 106, 0.3);
+      border-radius: 3px;
+    }
+
+    .iphone-scrollbar .thumb {
+      width: 3px;
+      height: 40%;
+      background: var(--orto-accent);
+      border-radius: 3px;
+      position: absolute;
+      top: 10%;
+    }
+
     .iphone-home {
       width: 40px;
       height: 4px;
@@ -401,6 +457,7 @@
           <div>
             <div class="iphone">
               <div class="iphone-notch"></div>
+              <div class="iphone-scrollbar"><div class="thumb"></div></div>
               <div class="iphone-screen">
                 <h4>📋 Minhas Consultas</h4>
                 <div class="app-item highlight-item">
@@ -429,6 +486,7 @@
           <div>
             <div class="iphone">
               <div class="iphone-notch"></div>
+              <div class="iphone-scrollbar"><div class="thumb"></div></div>
               <div class="iphone-screen">
                 <h4>💳 Plano de Pagamentos</h4>
                 <div class="app-item">
@@ -461,6 +519,7 @@
           <div>
             <div class="iphone">
               <div class="iphone-notch"></div>
+              <div class="iphone-scrollbar"><div class="thumb"></div></div>
               <div class="iphone-screen">
                 <h4>⏱️ Prazo para Conclusão</h4>
                 <div class="app-item">
@@ -490,6 +549,7 @@
           <div>
             <div class="iphone">
               <div class="iphone-notch"></div>
+              <div class="iphone-scrollbar"><div class="thumb"></div></div>
               <div class="iphone-screen">
                 <h4>📈 Evolução do Tratamento</h4>
                 <div class="app-item">
