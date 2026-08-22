@@ -42,22 +42,22 @@
       color: var(--orto-text);
       padding: 40px 60px;
       text-align: left;
-      overflow-y: auto !important;
-      max-height: 100%;
+      overflow: scroll !important;
+      height: 100% !important;
     }
 
     .reveal .slides section::-webkit-scrollbar {
-      width: 6px;
+      width: 5px;
     }
 
     .reveal .slides section::-webkit-scrollbar-track {
-      background: rgba(74, 140, 106, 0.1);
-      border-radius: 6px;
+      background: rgba(74, 140, 106, 0.2);
+      border-radius: 5px;
     }
 
     .reveal .slides section::-webkit-scrollbar-thumb {
       background: var(--orto-accent);
-      border-radius: 6px;
+      border-radius: 5px;
     }
 
     .reveal .slide-background {
@@ -208,7 +208,7 @@
     }
 
     .corner-logo {
-      position: absolute;
+      position: fixed;
       top: 15px;
       right: 20px;
       width: 40px;
@@ -216,26 +216,27 @@
       border-radius: 10px;
       opacity: 0.9;
       object-fit: cover;
+      z-index: 9999;
     }
 
     /* Timer */
     .timer-container {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 12px;
+      right: 12px;
       background: var(--orto-green);
-      border: 2px solid var(--orto-accent);
-      border-radius: 12px;
-      padding: 8px 16px;
+      border: 1px solid var(--orto-accent);
+      border-radius: 8px;
+      padding: 4px 10px;
       font-family: 'Poppins', sans-serif;
-      font-size: 0.9em;
+      font-size: 0.65em;
       font-weight: 700;
       color: var(--orto-accent);
       z-index: 9999;
       display: flex;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      gap: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
     .timer-container.warning {
@@ -422,15 +423,15 @@
 
       <!-- SLIDE 1 — CAPA -->
       <section class="cover">
-        <img src="assets/logo.png" alt="OrtoPlan" class="cover-logo">
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="cover-logo">
         <h1>OrtoPlan</h1>
         <p class="subtitle">O dentista acompanha o tratamento.</p>
         <p class="subtitle">Mas quem acompanha o paciente?</p>
+        <p class="subtitle" style="margin-top: 1.5em; font-size: 0.8em; opacity: 0.8;">Participantes:</p>
       </section>
 
       <!-- SLIDE 2 — Persona -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Persona: Ana, 24 anos</h2>
         <p><strong>Conhecendo o problema pela jornada da Ana</strong></p>
         <ul>
@@ -444,7 +445,6 @@
 
       <!-- SLIDE 3 — O problema (antes do OrtoPlan) -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>O problema (antes do OrtoPlan)</h2>
         <p><strong>Onde as informações da Ana estão espalhadas</strong></p>
         <ul>
@@ -459,7 +459,6 @@
 
       <!-- SLIDE 4 — O problema do lado do profissional -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>O problema do lado do profissional</h2>
         <p><strong>Problemas do profissional</strong></p>
         <ul>
@@ -475,7 +474,6 @@
 
       <!-- SLIDE 5 — Nossa solução: OrtoPlan -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Nossa solução: OrtoPlan</h2>
         <p><strong>O que é o OrtoPlan</strong></p>
         <ul>
@@ -487,7 +485,6 @@
 
       <!-- SLIDE 6 — Como funciona (MINI PROTÓTIPO iOS) -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Como funciona</h2>
 
         <div class="iphone-mockups">
@@ -619,7 +616,6 @@
 
       <!-- SLIDE 7 — Funcionalidades -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Funcionalidades</h2>
         <p><strong>O que o paciente pode fazer</strong></p>
         <ul>
@@ -635,7 +631,6 @@
 
       <!-- SLIDE 8 — DEMONSTRAÇÃO (ao vivo) -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>O que o Ortoplan consegue fazer</h2>
         <p><strong>Evolução por fotos</strong></p>
         <ul>
@@ -649,7 +644,6 @@
 
       <!-- SLIDE 9 — Modelo de negócio -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Modelo de negócio</h2>
         <p><strong>Modelo B2B2C</strong></p>
         <div class="flow">
@@ -689,7 +683,6 @@
 
       <!-- SLIDE 10 — Mercado e aquisição -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Mercado e aquisição</h2>
         <p><strong>Estratégia de aquisição</strong></p>
         <h3>Público-alvo: dentistas autônomos e pequenas clínicas de ortodontia</h3>
@@ -703,7 +696,6 @@
 
       <!-- SLIDE 11 — Projeção financeira -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Projeção financeira</h2>
         <p><strong>Cenário hipotético — primeiros 12 meses</strong></p>
         <table>
@@ -738,7 +730,6 @@
 
       <!-- SLIDE 12 — Diferencial competitivo -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Diferencial competitivo</h2>
         <p><strong>Por que o OrtoPlan?</strong></p>
         <ul>
@@ -751,7 +742,6 @@
 
       <!-- SLIDE 13 — Visão -->
       <section>
-        <img src="assets/logo.png" alt="OrtoPlan" class="corner-logo">
         <h2>Visão</h2>
         <p><strong>Nossa visão</strong></p>
         <p class="quote">Transformar o acompanhamento ortodôntico em uma experiência mais organizada, transparente e próxima entre dentista e paciente.</p>
@@ -759,7 +749,7 @@
 
       <!-- SLIDE 14 — Fechamento -->
       <section class="closing">
-        <img src="assets/logo.png" alt="OrtoPlan" class="cover-logo">
+        <img src="assets/logo.jpg" alt="OrtoPlan" class="cover-logo">
         <h2>Fechamento</h2>
         <p>Antes do OrtoPlan, a Ana tinha fotos espalhadas, dúvidas sobre pagamentos, consultas para lembrar e nenhuma visão clara da sua evolução. Agora, ela abre um aplicativo e acompanha toda a sua jornada.</p>
         <p class="quote">OrtoPlan: seu tratamento ortodôntico, planejado, acompanhado e na palma da sua mão.</p>
@@ -767,6 +757,9 @@
 
     </div>
   </div>
+
+  <!-- Logo fixa -->
+  <img src="assets/logo.jpg" alt="OrtoPlan" class="corner-logo">
 
   <!-- Timer 10 minutos -->
   <div class="timer-container" id="timer">
@@ -783,7 +776,9 @@
       width: 1280,
       height: 720,
       margin: 0,
-      center: true
+      center: false,
+      disableLayout: false,
+      scrollActivationWidth: null
     });
 
     // Timer 10 minutos
